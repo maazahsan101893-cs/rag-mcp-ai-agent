@@ -26,7 +26,7 @@ async def main(request : QueryRequest) :
     print("Tool Names :")
     for tool in tools :
         print(tool.name)
-    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash" , temperature=0)
+    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash-lite" , temperature=0)
     agent = create_agent( llm , tools ,system_prompt="""You are an intelligent routing agent.
 
 You have exactly three tools:
